@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ID3 Algorithm Config</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Decision Tree Configuration</h1>
+
+
+      <div class="form-group">
+        <label for="algorithm">Algorithm:</label>
+        <select id="algorithm" name="algorithm">
+          <option value="ID3">ID3</option>
+          <option value="C4.5">C4.5</option>
+        </select>
+      </div>
+
+      <form id="id3-form">
+      <div class="form-group">
+        <label for="epochs">Epochs:</label>
+        <input type="number" id="epochs" name="epochs" min="1" value="10" required />
+      </div>
+
+      <div class="form-group">
+        <label for="measure">Selection Measure:</label>
+        <select id="measure" name="measure">
+          <option value="infoGain">Info Gain</option>
+          <option value="entropy">Entropy</option>
+        </select>
+      </div>
+
+      
+      <div class="form-group">
+        <label for="training_sets">Training Dataset:</label>
+        <select id="training_sets" name="training_sets">
+          <option value="training">Training Set</option>
+          <option value="extended_training">Extended Training Set</option>
+          <option value="testing">Testing Set</option>
+        </select>
+      </div>
+
+        <div class="form-group">
+        <label for="testing_sets">Testing Dataset:</label>
+        <select id="testing_sets" name="testing_sets">
+          <option value="training">Training Set</option>
+          <option value="extended_training">Extended Training Set</option>
+          <option value="testing">Testing Set</option>
+        </select>
+      </div>
+      
+
+      <button id = "datasets_btn">View Datasets</button>
+
+      <button id = "Run_Algo" type="submit">Run Algorithm</button>
+    </form>
+
+    <div class="output-section">
+      <h2>Results</h2>
+      <pre id="output">Waiting for input...</pre>
+    </div>
+  </div>
+
+  <script src="/frontend/dist/main.js"></script>
+</body>
+</html>
